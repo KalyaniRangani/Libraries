@@ -8,5 +8,5 @@ def contbuild()
 }
 def contdeploy(jobname,ipadd,contextpath)
 {
-  sh 'scp /var/lib/jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ipadd}:/var/lib/tomcat10/webapps/${contextpath}.war'
+  sh "scp /var/lib/jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ipadd}:/var/lib/tomcat10/webapps/${contextpath}.war"
 }

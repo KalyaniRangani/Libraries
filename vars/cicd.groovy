@@ -10,3 +10,7 @@ def contdeploy(jobname,ipadd,contextpath)
 {
   sh "scp /var/lib/jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ipadd}:/var/lib/tomcat10/webapps/${contextpath}.war"
 }
+def conttest(jobname)
+{
+  sh "java -jar /var/lib/jenkins/workspace/${jobname}/testing.jar
+}
